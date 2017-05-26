@@ -13,7 +13,7 @@ namespace Aula1605.Models
         public int ProjetoID { get; set; }
         [Required]
         public string Nome { get; set; }
-        [Display()]
+        [Display(Name = "Descrição")]
         public string Descricao { get; set; }
         
         public bool Ativo { get; set; }

@@ -40,6 +40,33 @@ namespace Aula1605 {
         protected global::System.Web.UI.WebControls.TextBox txtNome;
         
         /// <summary>
+        /// rfvNome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNome;
+        
+        /// <summary>
+        /// lblDescricao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDescricao;
+        
+        /// <summary>
+        /// txtDescricao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescricao;
+        
+        /// <summary>
         /// lblAtivo control.
         /// </summary>
         /// <remarks>
@@ -49,13 +76,13 @@ namespace Aula1605 {
         protected global::System.Web.UI.WebControls.Label lblAtivo;
         
         /// <summary>
-        /// ChkAtivo control.
+        /// chkAtivo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox ChkAtivo;
+        protected global::System.Web.UI.WebControls.CheckBox chkAtivo;
         
         /// <summary>
         /// btnSalvar control.

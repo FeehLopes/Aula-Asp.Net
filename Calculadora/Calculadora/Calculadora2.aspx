@@ -1,9 +1,38 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Calculadora2.aspx.cs" Inherits="Calculadora.Calculadora2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="row">
+    
 
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <h1>Resultados</h1>
+    <asp:TextBox ID="txtV1A" runat="server"></asp:TextBox>
+    +                
+    <asp:TextBox ID="txtV2A" runat="server"></asp:TextBox>
+    =                
+    <asp:TextBox ID="txtR1A" runat="server"></asp:TextBox>
 
-    </div>
+    <br />
+
+    <asp:TextBox ID="txtV1S" runat="server"></asp:TextBox>
+    -
+    <asp:TextBox ID="txtV2S" runat="server"></asp:TextBox>
+    =                
+    <asp:TextBox ID="txtR1S" runat="server"></asp:TextBox>
+
+    <br />
+
+    <asp:TextBox ID="txtV1M" runat="server"></asp:TextBox>
+    *                
+    <asp:TextBox ID="txtV2M" runat="server"></asp:TextBox>
+    =                
+    <asp:TextBox ID="txtR1M" runat="server"></asp:TextBox>
+
+    <br />
+
+    <asp:TextBox ID="txtV1D" runat="server"></asp:TextBox>
+    :                
+    <asp:TextBox ID="txtV2D" runat="server"></asp:TextBox>
+    =                
+    <asp:TextBox ID="txtR1D" runat="server"></asp:TextBox>
+
+    
 </asp:Content>

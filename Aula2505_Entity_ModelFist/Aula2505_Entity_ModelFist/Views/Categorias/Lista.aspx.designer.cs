@@ -20,5 +20,14 @@ namespace Aula2505_Entity_ModelFist.Views.Categorias {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvCategorias;
+        
+        /// <summary>
+        /// gvExcluir control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvExcluir;
     }
 }

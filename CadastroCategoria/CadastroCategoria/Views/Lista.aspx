@@ -22,7 +22,11 @@
             <div class="row">
                 <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="btnSalvar_Click" />
                 <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger" OnClick="btnCancelar_Click" CausesValidation="false" />
-            </div>
+                <asp:Button ID="btnExcluir" runat="server" Text="Excluir" OnClick="btnExcluir_Click"  />
+                <asp:Button ID="btnListar" runat="server" Text="Listar" OnClick="btnListar_Click"   />
+                </div>
+
+            
         </ContentTemplate>
 
 

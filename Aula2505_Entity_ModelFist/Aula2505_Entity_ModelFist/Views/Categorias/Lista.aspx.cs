@@ -1,4 +1,5 @@
-﻿using Aula2505_Entity_ModelFist.Model;
+﻿using Aula2505_Entity_ModelFist.Controller;
+using Aula2505_Entity_ModelFist.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,14 @@ namespace Aula2505_Entity_ModelFist.Views.Categorias
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BancoDeDadosContainer contexto = new BancoDeDadosContainer();
+            
+            CategoriasController ctrl = new CategoriasController();
+           
 
-            var categorias = contexto.Categorias;
-
-            gvCategorias.DataSource = categorias.ToList();
+            gvCategorias.DataSource = ctrl.Listar();
             gvCategorias.DataBind();
+
+           
         }
     }
 }

@@ -81,6 +81,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -133,9 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controller\" />
-    <Folder Include="Model\" />
-    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -149,6 +148,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Model\BancoDeDados.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BancoDeDados.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\BancoDeDados.edmx.diagram">
+      <DependentUpon>BancoDeDados.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -187,6 +193,10 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\Aluno\CadastroAluno.aspx" />
+    <Content Include="Views\Curso\Curso.aspx" />
+    <Content Include="Views\Aluno\ListaAluno.aspx" />
+    <Content Include="Views\Curso\ListaCurso.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -217,6 +227,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controller\CursoController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,6 +237,11 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BancoDeDados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BancoDeDados.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -248,6 +264,34 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aluno\CadastroAluno.aspx.cs">
+      <DependentUpon>CadastroAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Aluno\CadastroAluno.aspx.designer.cs">
+      <DependentUpon>CadastroAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Curso\Curso.aspx.cs">
+      <DependentUpon>Curso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Curso\Curso.aspx.designer.cs">
+      <DependentUpon>Curso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aluno\ListaAluno.aspx.cs">
+      <DependentUpon>ListaAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Aluno\ListaAluno.aspx.designer.cs">
+      <DependentUpon>ListaAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Curso\ListaCurso.aspx.cs">
+      <DependentUpon>ListaCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Curso\ListaCurso.aspx.designer.cs">
+      <DependentUpon>ListaCurso.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

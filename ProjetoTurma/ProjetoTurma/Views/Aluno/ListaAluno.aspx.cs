@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoTurma.Controller;
+using ProjetoTurma.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,13 @@ namespace ProjetoTurma.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            AlunoController ctrl = new AlunoController();
 
+            List<Aluno> lista = ctrl.ListarAlunos();
+
+            gvAlunos.DataSource = ctrl.ListarAlunos();
+            gvAlunos.DataBind();
+                
         }
     }
 }

@@ -43,6 +43,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -149,14 +157,25 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Model\BancoDeDados.edmx">
+    <EntityDeploy Include="Model\BaseDeDados.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BancoDeDados.Designer.cs</LastGenOutput>
+      <LastGenOutput>BaseDeDados.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Model\BancoDeDados.edmx.diagram">
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
+    <Content Include="Model\BaseDeDados.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BaseDeDados.Context.cs</LastGenOutput>
+      <DependentUpon>BaseDeDados.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\BaseDeDados.edmx.diagram">
+      <DependentUpon>BaseDeDados.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Model\BaseDeDados.edmx.sql" />
+    <Content Include="Model\BaseDeDados.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BaseDeDados.cs</LastGenOutput>
+      <DependentUpon>BaseDeDados.edmx</DependentUpon>
+    </Content>
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -227,6 +246,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controller\AlunoController.cs" />
     <Compile Include="Controller\CursoController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -238,10 +258,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Model\BancoDeDados.Designer.cs">
+    <Compile Include="Model\Aluno.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseDeDados.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
+      <DependentUpon>BaseDeDados.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseDeDados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseDeDados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDados.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Curso.cs">
+      <DependentUpon>BaseDeDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -294,7 +330,9 @@
       <DependentUpon>ListaCurso.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

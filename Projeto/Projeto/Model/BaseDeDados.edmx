@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BaseDeDados.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BaseDeDadosStoreContainer">
+    <EntitySet Name="Alunos" EntityType="BaseDeDados.Store.Alunos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Turmas" EntityType="BaseDeDados.Store.Turmas" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="AlunoTurma" Association="BaseDeDados.Store.AlunoTurma">
+      <End Role="Aluno" EntitySet="Alunos" />
+      <End Role="Turma" EntitySet="Turmas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Alunos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CPF" Type="float" Nullable="false" />
+    <Property Name="RG" Type="float" Nullable="false" />
+    <Property Name="Idade" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Turmas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Quantidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Turno" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AlunoId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="AlunoTurma">
+    <End Role="Aluno" Type="BaseDeDados.Store.Alunos" Multiplicity="1" />
+    <End Role="Turma" Type="BaseDeDados.Store.Turmas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aluno">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Turma">
+        <PropertyRef Name="AlunoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="BaseDeDados" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="BaseDeDadosContainer1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Alunos" EntityType="BaseDeDados.Aluno" />
+          <EntitySet Name="Turmas" EntityType="BaseDeDados.Turma" />
+          <AssociationSet Name="AlunoTurma" Association="BaseDeDados.AlunoTurma">
+            <End Role="Aluno" EntitySet="Alunos" />
+            <End Role="Turma" EntitySet="Turmas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Aluno">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" />
+          <Property Name="CPF" Type="String" Nullable="false" />
+          <Property Name="RG" Type="String" Nullable="false" />
+          <Property Name="Idade" Type="String" Nullable="false" />
+          <NavigationProperty Name="Turma" Relationship="BaseDeDados.AlunoTurma" FromRole="Aluno" ToRole="Turma" />
+          <Property Name="Ativo" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Turma">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sala" Type="String" Nullable="false" />
+          <Property Name="Quantidade" Type="String" Nullable="false" />
+          <Property Name="Turno" Type="String" Nullable="false" />
+          <NavigationProperty Name="Aluno" Relationship="BaseDeDados.AlunoTurma" FromRole="Turma" ToRole="Aluno" />
+          <Property Name="AlunoId" Type="Int32" Nullable="false" />
+          <Property Name="Ativo" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="AlunoTurma">
+          <End Type="BaseDeDados.Aluno" Role="Aluno" Multiplicity="1" />
+          <End Type="BaseDeDados.Turma" Role="Turma" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aluno">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Turma">
+              <PropertyRef Name="AlunoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BaseDeDadosStoreContainer" CdmEntityContainer="BaseDeDadosContainer1">
+    <EntitySetMapping Name="Alunos">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDeDados.Aluno)">
+        <MappingFragment StoreEntitySet="Alunos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="Idade" ColumnName="Idade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turmas">
+      <EntityTypeMapping TypeName="IsTypeOf(BaseDeDados.Turma)">
+        <MappingFragment StoreEntitySet="Turmas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Sala" ColumnName="Sala" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="Turno" ColumnName="Turno" />
+          <ScalarProperty Name="AlunoId" ColumnName="AlunoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

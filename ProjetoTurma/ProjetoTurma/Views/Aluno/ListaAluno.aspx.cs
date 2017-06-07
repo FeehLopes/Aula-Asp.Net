@@ -15,7 +15,7 @@ namespace ProjetoTurma.Views
         {
             AlunoController ctrl = new AlunoController();
 
-            List<Aluno> lista = ctrl.ListarAlunos();
+         
 
             gvAlunos.DataSource = ctrl.ListarAlunos();
             gvAlunos.DataBind();

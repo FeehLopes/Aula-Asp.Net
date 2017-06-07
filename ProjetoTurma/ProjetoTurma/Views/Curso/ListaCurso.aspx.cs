@@ -14,10 +14,12 @@ namespace ProjetoTurma.Views
         {
             CursoController ctrl = new CursoController();
 
-            List<Curso> lista = ctrl.ListarCursos();
+            
 
             gvCurso.DataSource = ctrl.ListarCursos();
             gvCurso.DataBind();
+
+
         }
     }
 }

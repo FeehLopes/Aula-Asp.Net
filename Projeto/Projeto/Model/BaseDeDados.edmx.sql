@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/06/2017 20:33:23
+-- Date Created: 06/08/2017 20:11:03
 -- Generated from EDMX file: E:\AspNet\Projeto\Projeto\Model\BaseDeDados.edmx
 -- --------------------------------------------------
 
@@ -31,9 +31,10 @@ GO
 CREATE TABLE [dbo].[Alunos] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
-    [CPF] float  NOT NULL,
-    [RG] float  NOT NULL,
-    [Idade] float  NOT NULL
+    [CPF] nvarchar(max)  NOT NULL,
+    [RG] nvarchar(max)  NOT NULL,
+    [Idade] nvarchar(max)  NOT NULL,
+    [Ativo] bit  NOT NULL
 );
 GO
 
@@ -43,6 +44,7 @@ CREATE TABLE [dbo].[Turmas] (
     [Sala] nvarchar(max)  NOT NULL,
     [Quantidade] nvarchar(max)  NOT NULL,
     [Turno] nvarchar(max)  NOT NULL,
+    [Curso] nvarchar(max)  NOT NULL,
     [AlunoId] int  NOT NULL
 );
 GO

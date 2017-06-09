@@ -16,7 +16,7 @@ namespace Projeto.Views
 
         }
 
-        protected void Btncadastrar_Click(object sender, EventArgs e)
+        protected void BtnCadastrar_Click(object sender, EventArgs e)
         {
             Turma turmas = new Turma();
 
@@ -24,6 +24,7 @@ namespace Projeto.Views
             turmas.Sala = txtSala.Text;
             turmas.Turno = txtTurno.Text;
             turmas.Ativo = true;
+            turmas.Curso = txtCurso.Text;
 
             TurmaController ctrl = new TurmaController();
 
@@ -31,12 +32,12 @@ namespace Projeto.Views
             Response.Redirect("ListarTurma.aspx");
         }
 
-        protected void Btncancelar_Click(object sender, EventArgs e)
+        protected void BtnLimpar_Click(object sender, EventArgs e)
         {
             txtQuantAlunos.Text = string.Empty;
             txtSala.Text = string.Empty;
             txtTurno.Text = string.Empty;
-
+            txtCurso.Text = string.Empty;
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)

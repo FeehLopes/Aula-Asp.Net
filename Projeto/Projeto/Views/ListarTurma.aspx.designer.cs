@@ -94,30 +94,30 @@ namespace Projeto.Views {
         protected global::System.Web.UI.WebControls.TextBox txtSala;
         
         /// <summary>
-        /// btnExcluir control.
+        /// BtnExcluir control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExcluir;
+        protected global::System.Web.UI.WebControls.Button BtnExcluir;
         
         /// <summary>
-        /// btnEditar control.
+        /// BtnEditar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEditar;
+        protected global::System.Web.UI.WebControls.Button BtnEditar;
         
         /// <summary>
-        /// btnVoltar control.
+        /// BtnVoltar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVoltar;
+        protected global::System.Web.UI.WebControls.Button BtnVoltar;
     }
 }

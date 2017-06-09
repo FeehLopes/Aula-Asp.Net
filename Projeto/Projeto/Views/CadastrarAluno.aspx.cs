@@ -17,7 +17,7 @@ namespace Projeto.Views
 
         }
 
-        protected void Btncadastrar_Click(object sender, EventArgs e)
+        protected void BtnCadastrar_Click(object sender, EventArgs e)
         {
             Aluno alunos = new Aluno();
 
@@ -33,7 +33,7 @@ namespace Projeto.Views
             Response.Redirect("ListarAluno.aspx");
         }
 
-        protected void Btncancelar_Click(object sender, EventArgs e)
+        protected void BtnLimpar_Click(object sender, EventArgs e)
         {
             txtNome.Text = string.Empty;
             txtRG.Text = string.Empty;

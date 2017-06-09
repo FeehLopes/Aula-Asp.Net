@@ -8,7 +8,7 @@ namespace Projeto.Controller
 {
     public class AlunoController
     {
-        protected BaseDeDadosContainer1 contexto = new BaseDeDadosContainer1();
+        private BaseDeDadosContainer1 contexto = new BaseDeDadosContainer1();
         
          public void Adicionar(Aluno aluno)
         {

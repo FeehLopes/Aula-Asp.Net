@@ -15,11 +15,12 @@ namespace Projeto.Model
     public partial class Turma
     {
         public int Id { get; set; }
+        public string Curso { get; set; }
         public string Sala { get; set; }
-        public string Quantidade { get; set; }
         public string Turno { get; set; }
-        public int AlunoId { get; set; }
         public bool Ativo { get; set; }
+        public string Quantidade { get; set; }
+        public int AlunoId { get; set; }
     
         public virtual Aluno Aluno { get; set; }
     }

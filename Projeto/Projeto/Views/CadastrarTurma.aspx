@@ -14,10 +14,15 @@
     <asp:Label ID="lblSala" runat="server" Text="Sala :"></asp:Label>
     <asp:TextBox ID="txtSala" runat="server" CssClass="form-control"></asp:TextBox>
     <br />
+
+    <asp:Label ID="Curso" runat="server" Text="Curso"></asp:Label>
+    <asp:TextBox ID="txtCurso" runat="server"  CssClass="form-control"></asp:TextBox>
+
+
     <br />
-    <asp:Button ID="Btncadastrar" runat="server" Text="Cadastrar" OnClick="Btncadastrar_Click" CssClass="btn-default" />
-    <asp:Button ID="Btncancelar" runat="server" Text="Limpar" OnClick="Btncancelar_Click" CssClass="btn-default" Width="75px" />
-    <asp:Button ID="btnVoltar" runat="server" Text="Voltar" CssClass="btn-default" OnClick="btnVoltar_Click" Width="74px" />
+    <asp:Button ID="BtnCadastrar" runat="server" Text="Cadastrar" OnClick="BtnCadastrar_Click" CssClass="btn btn-info" />
+    <asp:Button ID="BtnLimpar" runat="server" Text="Limpar" OnClick="BtnLimpar_Click"  Cssclass="btn btn-primary" Width="89px" />
+    <asp:Button ID="btnVoltar" runat="server" Text="Voltar"  OnClick="btnVoltar_Click" Width="74px" Cssclass="btn btn-warning" />
 
 
 </asp:Content>

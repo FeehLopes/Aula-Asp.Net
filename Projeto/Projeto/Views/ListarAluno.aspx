@@ -26,12 +26,14 @@
     <br />
     <br />
 
-    <asp:Button ID="BtnExcluir" runat="server" Text="Exluir" OnClick="BtnExcluir_Click" Width="53px" />
-    <asp:Button ID="BtnEditar" runat="server" Text="Editar" OnClick="BtnEditar_Click" Width="72px" />
-    <br />
-    <br />
-    <br />
-    <asp:Button ID="BtnVoltar" runat="server" Text="Voltar" OnClick="BtnVoltar_Click" />
+    <asp:Button ID="BtnExcluir" runat="server" Text="Exluir" OnClick="BtnExcluir_Click" Width="85px"  class="btn btn-danger" />
+    <asp:Button ID="BtnEditar" runat="server" Text="Editar" OnClick="BtnEditar_Click" Width="85px" class="btn btn-info" />
+    <asp:Button ID="BtnVoltar" runat="server" Text="Voltar" OnClick="BtnVoltar_Click"   Width="85px" class="btn btn-primary"/>
 
+
+    <br />
+    
+    <br />
+    
 
 </asp:Content>

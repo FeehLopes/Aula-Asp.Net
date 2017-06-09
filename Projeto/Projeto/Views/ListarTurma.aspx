@@ -18,10 +18,10 @@
     <asp:Label ID="lblSala" runat="server" Text="Sala :" Font-Bold="True"></asp:Label>
     <asp:TextBox ID="txtSala" runat="server" CssClass="form-control"></asp:TextBox>
     <br />
-    <br />
-    <asp:Button ID="btnExcluir" runat="server" Text="Excluir" OnClick="btnExcluir_Click" CssClass="btn-default" />
-    <asp:Button ID="btnEditar" runat="server" Text="Editar" OnClick="btnEditar_Click" style="margin-left: 20px" Width="63px" CssClass="btn-default" />
-    <br />
-    <br />
-    <asp:Button ID="btnVoltar" runat="server" Text="Voltar" OnClick="btnVoltar_Click" CssClass="btn-default" />
+     <br />
+     <br />
+
+    <asp:Button ID="BtnExcluir" runat="server" Text="Exluir" OnClick="BtnExcluir_Click" Width="85px"  class="btn btn-danger" />
+    <asp:Button ID="BtnEditar" runat="server" Text="Editar" OnClick="BtnEditar_Click" Width="85px" class="btn btn-info" />
+    <asp:Button ID="BtnVoltar" runat="server" Text="Voltar" OnClick="BtnVoltar_Click"   Width="85px" class="btn btn-primary" />
 </asp:Content>

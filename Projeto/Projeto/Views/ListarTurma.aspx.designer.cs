@@ -22,22 +22,22 @@ namespace Projeto.Views {
         protected global::System.Web.UI.WebControls.GridView gvTurmas;
         
         /// <summary>
-        /// lblId control.
+        /// lblCurso control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblId;
+        protected global::System.Web.UI.WebControls.Label lblCurso;
         
         /// <summary>
-        /// txtIdTurma control.
+        /// txtCurso control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdTurma;
+        protected global::System.Web.UI.WebControls.TextBox txtCurso;
         
         /// <summary>
         /// lblTurno control.
@@ -94,30 +94,30 @@ namespace Projeto.Views {
         protected global::System.Web.UI.WebControls.TextBox txtSala;
         
         /// <summary>
-        /// BtnExcluir control.
+        /// btnExcluir control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnExcluir;
+        protected global::System.Web.UI.WebControls.Button btnExcluir;
         
         /// <summary>
-        /// BtnEditar control.
+        /// btnEditar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnEditar;
+        protected global::System.Web.UI.WebControls.Button btnEditar;
         
         /// <summary>
-        /// BtnVoltar control.
+        /// btnVoltar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnVoltar;
+        protected global::System.Web.UI.WebControls.Button btnVoltar;
     }
 }

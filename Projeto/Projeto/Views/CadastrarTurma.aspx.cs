@@ -23,7 +23,7 @@ namespace Projeto.Views
             turmas.Quantidade = txtQuantAlunos.Text;
             turmas.Sala = txtSala.Text;
             turmas.Turno = txtTurno.Text;
-            turmas.Ativo = true;
+           
             turmas.Curso = txtCurso.Text;
 
             TurmaController ctrl = new TurmaController();
@@ -43,6 +43,11 @@ namespace Projeto.Views
         protected void btnVoltar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Entrar.aspx");
+        }
+
+        protected void btnListar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarTurma.aspx");
         }
     }
 }

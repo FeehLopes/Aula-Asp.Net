@@ -4,8 +4,8 @@
     <h1> Turmas </h1>
     <asp:GridView ID="gvTurmas" runat="server" Width="342px"></asp:GridView>
     <br />
-    <asp:Label ID="lblId" runat="server" Text="Id:" Font-Bold="True"></asp:Label>
-    <asp:TextBox ID="txtIdTurma" runat="server" CssClass="form-control" Width="117px"></asp:TextBox>
+    <asp:Label ID="lblCurso" runat="server" Text="Curso:" Font-Bold="True"></asp:Label>
+    <asp:TextBox ID="txtCurso" runat="server" CssClass="form-control" Width="117px"></asp:TextBox>
     <br />
     <asp:Label ID="lblTurno" runat="server" Text="Turno :" Font-Bold="True"></asp:Label>
     <asp:TextBox ID="txtTurno" runat="server" CssClass="form-control"></asp:TextBox>
@@ -21,7 +21,7 @@
      <br />
      <br />
 
-    <asp:Button ID="BtnExcluir" runat="server" Text="Exluir" OnClick="BtnExcluir_Click" Width="85px"  class="btn btn-danger" />
-    <asp:Button ID="BtnEditar" runat="server" Text="Editar" OnClick="BtnEditar_Click" Width="85px" class="btn btn-info" />
-    <asp:Button ID="BtnVoltar" runat="server" Text="Voltar" OnClick="BtnVoltar_Click"   Width="85px" class="btn btn-primary" />
+    <asp:Button ID="btnExcluir" runat="server" Text="Exluir" OnClick="btnExcluir_Click" Width="85px"  Cssclass="btn btn-danger" />
+    <asp:Button ID="btnEditar" runat="server" Text="Editar" OnClick="btnEditar_Click" Width="85px" Cssclass="btn btn-info" />
+    <asp:Button ID="btnVoltar" runat="server" Text="Voltar" OnClick="btnVoltar_Click"   Width="85px" Cssclass="btn btn-primary" />
 </asp:Content>

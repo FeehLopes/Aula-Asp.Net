@@ -20,9 +20,10 @@
 
 
     <br />
-    <asp:Button ID="BtnCadastrar" runat="server" Text="Cadastrar" OnClick="BtnCadastrar_Click" CssClass="btn btn-info" />
-    <asp:Button ID="BtnLimpar" runat="server" Text="Limpar" OnClick="BtnLimpar_Click"  Cssclass="btn btn-primary" Width="89px" />
-    <asp:Button ID="btnVoltar" runat="server" Text="Voltar"  OnClick="btnVoltar_Click" Width="74px" Cssclass="btn btn-warning" />
+    <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" OnClick="BtnCadastrar_Click" CssClass="btn btn-info" />
+    <asp:Button ID="btnLimpar" runat="server" Text="Limpar" OnClick="BtnLimpar_Click"   Cssclass="btn btn-success" Width="89px" />
+    <asp:Button ID="btnListar" runat="server" Text="Listar" Cssclass="btn btn-primary" OnClick="btnListar_Click"/>
+    <asp:Button ID="btnVoltar" runat="server" Text="Voltar"  OnClick="btnVoltar_Click" Width="74px"  Cssclass="btn btn-warning" />
 
 
 </asp:Content>

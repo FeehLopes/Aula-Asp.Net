@@ -22,10 +22,10 @@ namespace Projeto.Views
             Aluno alunos = new Aluno();
 
             alunos.Nome = txtNome.Text;
-            alunos.Idade = txtIdade.Text;
+            
             alunos.RG = txtRG.Text;
             alunos.CPF = txtCPF.Text;
-            alunos.Ativo = true;
+       
 
             AlunoController ctrl = new AlunoController();
 
@@ -38,13 +38,18 @@ namespace Projeto.Views
             txtNome.Text = string.Empty;
             txtRG.Text = string.Empty;
             txtCPF.Text = string.Empty;
-            txtIdade.Text = string.Empty;
+           
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)
         {
 
             Response.Redirect("Entrar.aspx");
+        }
+
+        protected void btnListar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarAluno.aspx");
         }
     }
 

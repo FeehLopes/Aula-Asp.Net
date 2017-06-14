@@ -13,10 +13,10 @@ namespace Projeto.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BaseDeDadosContainer1 : DbContext
+    public partial class BaseDeDadosContainer8 : DbContext
     {
-        public BaseDeDadosContainer1()
-            : base("name=BaseDeDadosContainer1")
+        public BaseDeDadosContainer8()
+            : base("name=BaseDeDadosContainer8")
         {
         }
     
@@ -25,7 +25,7 @@ namespace Projeto.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Aluno> Alunos { get; set; }
-        public virtual DbSet<Turma> Turmas { get; set; }
+        public virtual DbSet<Aluno> Aluno { get; set; }
+        public virtual DbSet<Turma> Turma { get; set; }
     }
 }

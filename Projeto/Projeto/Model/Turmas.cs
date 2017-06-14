@@ -12,20 +12,16 @@ namespace Projeto.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Aluno
+    public partial class Turmas
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Aluno()
-        {
-            this.Turma = new HashSet<Turma>();
-        }
-    
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string RG { get; set; }
-        public string CPF { get; set; }
+        public string Turno { get; set; }
+        public string Sala { get; set; }
+        public string Quantidade { get; set; }
+        public string Curso { get; set; }
+        public bool Ativo { get; set; }
+        public int AlunoId { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Turma> Turma { get; set; }
+        public virtual Aluno Aluno { get; set; }
     }
 }

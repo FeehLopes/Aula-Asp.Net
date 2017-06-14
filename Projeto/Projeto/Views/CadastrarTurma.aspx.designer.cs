@@ -85,22 +85,31 @@ namespace Projeto.Views {
         protected global::System.Web.UI.WebControls.TextBox txtCurso;
         
         /// <summary>
-        /// BtnCadastrar control.
+        /// btnCadastrar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnCadastrar;
+        protected global::System.Web.UI.WebControls.Button btnCadastrar;
         
         /// <summary>
-        /// BtnLimpar control.
+        /// btnLimpar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnLimpar;
+        protected global::System.Web.UI.WebControls.Button btnLimpar;
+        
+        /// <summary>
+        /// btnListar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnListar;
         
         /// <summary>
         /// btnVoltar control.

@@ -8,35 +8,28 @@ namespace Projeto.Controller
 {
     public class TurmaController
     {
-      private BaseDeDadosContainer1 contexto = new BaseDeDadosContainer1();
+      private BaseDeDadosContainer8 contexto = new BaseDeDadosContainer8();
 
-        public void Adiciornar(Turma turma)
+        public void Adiciornar(Turma turmas)
         {
-            if (turma != null)
+            if (turmas != null)
             {
-                contexto.Turmas.Add(turma);
+                contexto.Turma.Add(turmas);
                 contexto.SaveChanges();
             }
         }
         public List<Turma> ListarTurmas()
         {
-            return contexto.Turmas.Where
-                (a => a.Ativo == true).ToList();
+            return contexto.Turma.ToList();
         }
 
-        public List<Turma> ListarAlunoInativo()
-        {
-            return contexto.Turmas.Where
-                (a => a.Ativo == false).ToList();
-
-        }
+       
         public Turma BuscarTurmaPorId(int id)
         {
-            return contexto.Turmas.Find(id);
+            return contexto.Turma.Find(id);
         }
         public void Excluir(Turma turma)
         {
-            turma.Ativo = false;
             contexto.Entry(turma).State = System.Data.Entity.EntityState.Deleted;
 
             contexto.SaveChanges();

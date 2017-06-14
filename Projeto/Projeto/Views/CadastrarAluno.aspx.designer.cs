@@ -67,24 +67,6 @@ namespace Projeto.Views {
         protected global::System.Web.UI.WebControls.TextBox txtRG;
         
         /// <summary>
-        /// lblIdade control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIdade;
-        
-        /// <summary>
-        /// txtIdade control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdade;
-        
-        /// <summary>
         /// BtnCadastrar control.
         /// </summary>
         /// <remarks>
@@ -101,6 +83,15 @@ namespace Projeto.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnLimpar;
+        
+        /// <summary>
+        /// btnListar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnListar;
         
         /// <summary>
         /// btnVoltar control.

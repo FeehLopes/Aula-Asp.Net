@@ -13,9 +13,10 @@ namespace Projeto.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            AlunoController crtl = new AlunoController();
 
-            List<Aluno> lista = crtl.ListarAlunos();
+            AlunoController ctrl = new AlunoController();
+
+            List<Aluno> lista = ctrl.ListarAlunos();
 
             gvAlunos.DataSource = lista.OrderBy(a => a.Id);
             gvAlunos.DataBind();
@@ -23,16 +24,15 @@ namespace Projeto.Views
 
         }
 
-        protected void BtnExcluir_Click(object sender, EventArgs e)
+        protected void btnExcluir_Click(object sender, EventArgs e)
         {
-
             Aluno alunos = new Aluno();
 
             alunos.Nome = txtNome.Text;
             alunos.RG = txtRG.Text;
             alunos.CPF = txtCPF.Text;
-            alunos.Idade = txtIdade.Text;
-            alunos.Id = int.Parse(txtIdTurma.Text);
+           
+          
 
             AlunoController ctrl = new AlunoController();
             alunos = ctrl.BuscarAlunoPorId(alunos);
@@ -41,6 +41,8 @@ namespace Projeto.Views
                 ctrl.Excluir(alunos);
                 AtualizarLista();
             }
+
+
         }
 
             protected void AtualizarLista()
@@ -54,33 +56,29 @@ namespace Projeto.Views
 
         }
 
-        protected void BtnEditar_Click(object sender, EventArgs e)
+        protected void btnEditar_Click(object sender, EventArgs e)
         {
-            Aluno aluno = new Aluno();
+            Aluno alunos = new Aluno();
+
+            alunos.Nome = txtNome.Text;
+            alunos.RG = txtRG.Text;
+            alunos.CPF = txtCPF.Text;
+            
+
             AlunoController ctrl = new AlunoController();
-            aluno.Id = int.Parse(txtIdTurma.Text);
-            aluno = ctrl.BuscarAlunoPorId(aluno);
-
-
-            if (aluno != null)
+            alunos = ctrl.BuscarAlunoPorId(alunos);
+            if (alunos != null)
             {
-
-                aluno.Nome = txtNome.Text;
-                aluno.RG = txtRG.Text;
-                aluno.CPF = txtCPF.Text;
-                aluno.Idade = txtIdade.Text;
-
-                ctrl.Editar(aluno);
+                ctrl.Excluir(alunos);
                 AtualizarLista();
-
             }
 
 
         }
 
-        protected void BtnVoltar_Click(object sender, EventArgs e)
+        protected void btnVoltar_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("CadastrarAluno.aspx");
         }
     }
 }

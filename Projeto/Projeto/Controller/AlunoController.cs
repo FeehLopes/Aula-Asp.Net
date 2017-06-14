@@ -8,38 +8,34 @@ namespace Projeto.Controller
 {
     public class AlunoController
     {
-        private BaseDeDadosContainer1 contexto = new BaseDeDadosContainer1();
+        private BaseDeDadosContainer8 contexto = new BaseDeDadosContainer8();
         
-         public void Adicionar(Aluno aluno)
+         public void Adicionar(Aluno alunos)
         {
-            if(aluno != null)
+            if(alunos != null)
             {
-                contexto.Alunos.Add(aluno);
+                contexto.Aluno.Add(alunos);
                 contexto.SaveChanges();
             }
         }
 
         public List<Aluno> ListarAlunos()
         {
-            return contexto.Alunos.Where
-                (a => a.Ativo == true).ToList();
+            return contexto.Aluno.ToList();
         }
 
-        public List<Aluno> ListarAlunoInativo()
-        {
-            return contexto.Alunos.Where
-                (a => a.Ativo == false).ToList();
-        }
+       
 
         public Aluno BuscarAlunoPorId(Aluno aluno)
         {
             int id = aluno.Id;
-            return contexto.Alunos.Find(id);
+            return contexto.Aluno.Find(id);
         }
         public void Excluir(Aluno aluno)
         {
-            aluno.Ativo = false;
-            contexto.Entry(aluno).State = System.Data.Entity.EntityState.Modified;
+            contexto.Entry(aluno).State = System.Data.Entity.EntityState.Deleted;
+
+            contexto.SaveChanges();
 
             contexto.SaveChanges();
         }

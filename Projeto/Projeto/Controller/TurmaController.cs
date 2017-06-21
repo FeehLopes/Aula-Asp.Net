@@ -8,7 +8,7 @@ namespace Projeto.Controller
 {
     public class TurmaController
     {
-      private BaseDeDadosContainer8 contexto = new BaseDeDadosContainer8();
+      private BaseDeDadosContainer contexto = new BaseDeDadosContainer();
 
         public void Adiciornar(Turma turmas)
         {

@@ -8,7 +8,7 @@ namespace Projeto.Controller
 {
     public class AlunoController
     {
-        private BaseDeDadosContainer8 contexto = new BaseDeDadosContainer8();
+        private BaseDeDadosContainer contexto = new BaseDeDadosContainer();
         
          public void Adicionar(Aluno alunos)
         {
@@ -31,17 +31,17 @@ namespace Projeto.Controller
             int id = aluno.Id;
             return contexto.Aluno.Find(id);
         }
-        public void Excluir(Aluno aluno)
+        public void Excluir(Aluno alunos)
         {
-            contexto.Entry(aluno).State = System.Data.Entity.EntityState.Deleted;
+            contexto.Entry(alunos).State = System.Data.Entity.EntityState.Deleted;
 
             contexto.SaveChanges();
 
             contexto.SaveChanges();
         }
-        public void Editar(Aluno aluno)
+        public void Editar(Aluno alunos)
         {
-            contexto.Entry(aluno).State = System.Data.Entity.EntityState.Modified;
+            contexto.Entry(alunos).State = System.Data.Entity.EntityState.Modified;
             contexto.SaveChanges();
         }
     }

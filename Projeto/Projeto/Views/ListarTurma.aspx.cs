@@ -31,35 +31,35 @@ namespace Projeto.Views
 
         protected void btnExcluir_Click(object sender, EventArgs e)
         {
-            Turma turma = new Turma();
+            Turma turmas = new Turma();
 
-            turma.Quantidade = txtQuantAlunos.Text;
-            turma.Sala = txtSala.Text;
-            turma.Turno = txtTurno.Text;
-            turma.Curso = txtCurso.Text;
-            
+            turmas.Quantidade = txtQuantAlunos.Text;
+            turmas.Sala = txtSala.Text;
+            turmas.Turno = txtTurno.Text;
+            turmas.Id = int.Parse(txtIdTurma.Text);
 
             TurmaController ctrl = new TurmaController();
-            ctrl.Excluir(turma);
+            ctrl.Excluir(turmas);
             AtualizarLista();
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            Turma turma = new Turma();
+            Turma turmas = new Turma();
             TurmaController ctrl = new TurmaController();
-            turma = ctrl.BuscarTurmaPorId(turma.Id);
+            turmas.Id = int.Parse(txtIdTurma.Text);
+            turmas = ctrl.BuscarTurmaPorId(turmas.Id);
 
-            if (turma != null)
+
+            if (turmas != null)
             {
 
-                turma.Quantidade= txtQuantAlunos.Text;
-                turma.Sala = txtSala.Text;
-                turma.Turno = txtTurno.Text;
-                turma.Curso = txtCurso.Text;
-                ctrl.Editar(turma);
-                AtualizarLista();
+                turmas.Quantidade = txtQuantAlunos.Text;
+                turmas.Sala = txtSala.Text;
+                turmas.Turno = txtTurno.Text;
 
+                ctrl.Editar(turmas);
+                AtualizarLista();
             }
 
         }

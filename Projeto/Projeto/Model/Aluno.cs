@@ -14,18 +14,12 @@ namespace Projeto.Model
     
     public partial class Aluno
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Aluno()
-        {
-            this.Turma = new HashSet<Turma>();
-        }
-    
         public int Id { get; set; }
         public string Nome { get; set; }
         public string RG { get; set; }
         public string CPF { get; set; }
+        public int TurmaId { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Turma> Turma { get; set; }
+        public virtual Turma Turma { get; set; }
     }
 }

@@ -22,11 +22,9 @@ namespace Projeto.Views
             Aluno alunos = new Aluno();
 
             alunos.Nome = txtNome.Text;
-            
             alunos.RG = txtRG.Text;
             alunos.CPF = txtCPF.Text;
-       
-
+            alunos.TurmaId = int.Parse(txtIdTurma.Text);
             AlunoController ctrl = new AlunoController();
 
             ctrl.Adicionar(alunos);

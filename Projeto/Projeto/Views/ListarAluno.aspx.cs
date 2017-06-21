@@ -31,8 +31,8 @@ namespace Projeto.Views
             alunos.Nome = txtNome.Text;
             alunos.RG = txtRG.Text;
             alunos.CPF = txtCPF.Text;
-           
-          
+            alunos.Id = int.Parse(txtIdTurma.Text);
+
 
             AlunoController ctrl = new AlunoController();
             alunos = ctrl.BuscarAlunoPorId(alunos);
@@ -59,18 +59,20 @@ namespace Projeto.Views
         protected void btnEditar_Click(object sender, EventArgs e)
         {
             Aluno alunos = new Aluno();
-
-            alunos.Nome = txtNome.Text;
-            alunos.RG = txtRG.Text;
-            alunos.CPF = txtCPF.Text;
-            
-
             AlunoController ctrl = new AlunoController();
+            alunos.Id = int.Parse(txtIdTurma.Text);
             alunos = ctrl.BuscarAlunoPorId(alunos);
             if (alunos != null)
             {
-                ctrl.Excluir(alunos);
+
+                alunos.Nome = txtNome.Text;
+                alunos.RG = txtRG.Text;
+                alunos.CPF = txtCPF.Text;
+                
+
+                ctrl.Editar(alunos);
                 AtualizarLista();
+
             }
 
 

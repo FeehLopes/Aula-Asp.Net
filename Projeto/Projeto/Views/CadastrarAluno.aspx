@@ -16,7 +16,9 @@
     <asp:TextBox ID="txtRG" runat="server" CssClass="form-control"></asp:TextBox>
     <br />
     
-    
+     <asp:Label ID="lblId" runat="server" Text="IdTurma :" Font-Bold="True"></asp:Label>
+    <asp:TextBox ID="txtIdTurma" runat="server" CssClass="form-control" Width="117px"></asp:TextBox>
+    <br />
 
     <br />
     <asp:Button ID="BtnCadastrar" runat="server" Text="Cadastrar" OnClick="BtnCadastrar_Click"  CssClass="btn btn-info" />

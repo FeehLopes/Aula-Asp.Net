@@ -4,6 +4,10 @@
     <h1> Turmas </h1>
     <asp:GridView ID="gvTurmas" runat="server" Width="342px"></asp:GridView>
     <br />
+    <asp:Label ID="lblId" runat="server" Text="Id:" Font-Bold="True"></asp:Label>
+    <asp:TextBox ID="txtIdTurma" runat="server" CssClass="form-control" Width="117px"></asp:TextBox>
+    <br />
+
     <asp:Label ID="lblCurso" runat="server" Text="Curso:" Font-Bold="True"></asp:Label>
     <asp:TextBox ID="txtCurso" runat="server" CssClass="form-control" Width="117px"></asp:TextBox>
     <br />
@@ -17,6 +21,8 @@
 
     <asp:Label ID="lblSala" runat="server" Text="Sala :" Font-Bold="True"></asp:Label>
     <asp:TextBox ID="txtSala" runat="server" CssClass="form-control"></asp:TextBox>
+
+
     <br />
      <br />
      <br />

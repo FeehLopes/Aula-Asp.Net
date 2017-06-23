@@ -9,6 +9,7 @@ namespace BaseModels
 {
     class Produto
     {
+        [Key]
         public int ProdutoID { get; set; }
         [Required]
         [StringLength(10)]

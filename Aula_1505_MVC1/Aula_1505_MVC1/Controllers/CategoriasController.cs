@@ -48,5 +48,23 @@ namespace Aula_1505_MVC1.Controllers
         {
             return View(categoria);
         }
+
+        public ActionResult Index2()
+        {
+            List<Categoria> categorias = new List<Categoria>();
+
+            categorias.Add(
+                new Categoria()
+                {
+                    Nome = "Casa"
+                }
+              );
+            categorias.Add(new Categoria() { Nome = "Carro" });
+            categorias.Add(new Categoria() { Nome = "Trabalho" });
+            categorias.Add(new Categoria() { Nome = "Família" });
+
+
+            return View(categorias);
+        }
     }
 }

@@ -1,11 +1,41 @@
-﻿
+﻿@using Aula_1505_MVC1.Models
+
 @{
     ViewBag.Title = "Lista de Categorias";
 }
 
 <h2>@ViewBag.Title</h2>
 
-@foreach (string categ in ViewBag.MinhasCategorias)
+
+
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Nome
+        </th>
+
+        <th>
+            Ativo
+        </th>
+    </tr>
+@foreach (Categoria categ in ViewBag.MinhasCategorias)
 {
-    <p>@categ</p>
+    <tr>
+        <td>
+            <p>@categ.CategoriaID</p>
+        </td>
+        <td>
+            <p>@categ.Nome</p>
+        </td>
+        
+        <td>
+            <p>@categ.Ativo</p>
+        </td>
+       
+        
+    </tr>
 }
+</table>
